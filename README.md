@@ -27,46 +27,42 @@ I think it is the best explanation.
 then manually download project data in working directory
 
 1. Merges the training and the test sets to create one data set.
-1.1 Load raw data in R from files
-prerequisite(again): by hands I downloaded data in directory "Data" in working directory
-1.1.1 Load measurements (test and train) in R from files
-1.1.2 Setting descriptive column names for test and train in R from files
-Load descriptive column names for test and train in R from files
-Make a row of names (extract second column and transpose it)
-data_column_names <- t(data_raw_column_names[,2])
-A least setting descriptive column names for test and train in R from files
-1.2 The merging itself
+1.1 Load raw data in R from files.
+(prerequisite(again): by hands I downloaded data in directory "Data" in working directory)
+1.1.1 Load measurements (test and train) in R from files.
+1.1.2 Setting descriptive column names for test and train in R from files.
+Load descriptive column names for test and train in R from files.
+Make a row of names (extract second column and transpose it).
+At least setting descriptive column names for test and train in R from files.
+1.2 The merging itself.
 
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-Find columns to extract (condition: names contain "mean()" or "std()")
+Find columns to extract (condition: names contain "mean()" or "std()").
 Extracts only the measurements on the mean and standard deviation for each measurement. 
 
-3. Uses descriptive activity names to name the activities in the data set
-we will do it in next section
+3. Uses descriptive activity names to name the activities in the data set (we will do it in next section).
 
 4. Appropriately labels the data set with descriptive variable names. 
-4.1 Load activity names in R from files
-4.2 Load activity numbers (test and train) in R from files
-4.3 Merge activity numbers (test and train)
-4.4 Make the column of activite labels (for column of merged activity numbers)
+4.1 Load activity names in R from files.
+4.2 Load activity numbers (test and train) in R from files.
+4.3 Merge activity numbers (test and train).
+4.4 Make the column of activite labels (for column of merged activity numbers).
 4.5 Bind the column of activite labels to dataframe with measurements on the mean and standard deviation
-and give the first column the proper name
-4.6 Bind the subject data (test and train) for dataframe with measurements and activity labels
-4.6.1 Read the subject data (test and train) for measurements
-4.6.2 Bind the subject data (test and train) in one column
-4.6.3 Give the column with subject data the proper name
-4.6.4 At least bind the subject data with measurements and activity labels
-4.7 Write the dataframe to the file first_data_set.txt
+and give the first column the proper name.
+4.6 Bind the subject data (test and train) for dataframe with measurements and activity labels.
+4.6.1 Read the subject data (test and train) for measurements.
+4.6.2 Bind the subject data (test and train) in one column.
+4.6.3 Give the column with subject data the proper name.
+4.6.4 At least bind the subject data with measurements and activity labels.
+4.7 Write the dataframe to the file first_data_set.txt.
  
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-we will createsecond data set by reshaping the first data set
-for reshaping we wil use two packages: reshape2 and plyr(may be) 
-5.1. Reshape the first data set in data frame
-5.2. Calculate the mean(average) with the help of ddply function
-5.3. Change name "mean" with "average"
-5.4. Write second data set to the file
-
-
+We will create second data set by reshaping the first data set
+for reshaping we wil use two packages: reshape2 and plyr(may be).
+5.1. Reshape the first data set in data frame.
+5.2. Calculate the mean(average) with the help of ddply function.
+5.3. Change name "mean" with "average".
+5.4. Write second data set to the file.
 
 
 
